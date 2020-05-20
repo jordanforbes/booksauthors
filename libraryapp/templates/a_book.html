@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{book.title}}</h1>
+        <br>
+        <br>
+        <p>{{book.desc}}</p>
+
+        <ul>
+            {% for authorObj in allAuthors%}
+            <li>{{authorObj.firstName}} {{authorObj.lastName}} {{authorObj.books.title}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
